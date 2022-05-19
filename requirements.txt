@@ -6,4 +6,4 @@ google-cloud
 google-cloud-vision
 pdf2image==1.16.0
 resparser==0.6
-pickle
+pickleshare==0.7.5
