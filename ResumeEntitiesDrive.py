@@ -97,7 +97,7 @@ def get_resume_entities(drive_df):
         except:
             pass
 
-        #streamlit code
+        #streamlit progress bar code
         time.sleep(0.1)
         my_bar.progress(percentage_complete + step)
         percentage_complete+=step
