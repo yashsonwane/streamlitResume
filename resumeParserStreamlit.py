@@ -2,8 +2,8 @@ import base64
 import streamlit as st
 import pandas as pd
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
-# from ResumeEntitiesDrive import get_resume_entities
-# from Gdrive import get_drive_folder_list
+from ResumeEntitiesDrive import get_resume_entities
+from Gdrive import get_drive_folder_list
 
 
 #page layout
@@ -57,11 +57,11 @@ def main():
             print(folder)
             try:
                 pass
-                # drive_list_df=get_drive_folder_list(folder)
+                drive_list_df=get_drive_folder_list(folder)
             except:
                 pass
-            # print(drive_list_df)
-            # flag=get_resume_entities(drive_list_df)
+            print(drive_list_df)
+            flag=get_resume_entities(drive_list_df)
             print("drive dateset")
                 
     #Selecting dataset
