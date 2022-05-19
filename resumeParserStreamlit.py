@@ -131,7 +131,7 @@ def main():
                         skills = [s.lstrip().rstrip() for s in skills]
                         points_per_skill = 6/len(skills)
                         for skill in skills:
-                            if skill in df_entities.iloc[i].Skills:
+                            if any([(skill in i) for i in eval(df_entities.iloc[i].Skills) if len(skill) >=3]):
                                 score += points_per_skill
 
                     except:
