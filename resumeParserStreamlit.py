@@ -1,5 +1,4 @@
 import base64
-from pyrsistent import T
 import streamlit as st
 import pandas as pd
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
