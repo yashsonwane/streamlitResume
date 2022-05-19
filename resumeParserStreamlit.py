@@ -2,11 +2,9 @@ import base64
 import streamlit as st
 import pandas as pd
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
-from pathlib import Path
 from ResumeEntitiesDrive import get_resume_entities
 from Gdrive import get_drive_folder_list
-import pandas as pd
-from Google import Create_Service
+
 
 #page layout
 st.set_page_config(layout = 'wide', initial_sidebar_state='collapsed')
