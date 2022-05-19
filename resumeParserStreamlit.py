@@ -103,6 +103,7 @@ def main():
             else:
                 try:
                     df_entities=pd.read_csv("NewDriveResumeEntities.csv")
+                    print("working on drive csv")
                     st.write("You selected Google Drive Dataset.")
                 except Exception as e:
                     print(e)

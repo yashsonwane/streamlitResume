@@ -9,13 +9,16 @@ from resparser import resumeparser
 from Gdrive import get_shareable_link,download_file
 from Google import Create_Service
 
-CLIENT_SECRET_FILE = r'client_secrets.json'
-API_NAME = 'drive'
-API_VERSION = 'v3'
-SCOPES = ['https://www.googleapis.com/auth/drive']
+try:
+    CLIENT_SECRET_FILE = r'client_secrets.json'
+    API_NAME = 'drive'
+    API_VERSION = 'v3'
+    SCOPES = ['https://www.googleapis.com/auth/drive']
 
 
-service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+    service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+except:
+    pass
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'vision_api_key.json'
 client = vision_v1.ImageAnnotatorClient()
@@ -105,6 +108,7 @@ def get_resume_entities(drive_df):
         print("entities_df does not contain None Cloumn")
     st.subheader("Done")
     entities_df.to_csv("NewDriveResumeEntities.csv",index=False)
+    print("new csv created")
     
     return True
 
