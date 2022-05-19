@@ -79,7 +79,6 @@ numpy==1.21.5
 oauth2client==4.1.3
 oauthlib==3.2.0
 opencv-python==4.5.5.64
-packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1637239678211/work
 pandas==1.3.5
 pandocfilters==1.5.0
 parso==0.8.3
