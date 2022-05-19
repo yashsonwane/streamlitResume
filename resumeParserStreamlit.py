@@ -1,4 +1,5 @@
 import base64
+from pyrsistent import T
 import streamlit as st
 import pandas as pd
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
@@ -29,7 +30,7 @@ def main():
 
     st.title("Discite Demo-Resume Parser ")
     
-    # uploaded_file = st.file_uploader("Choose your .pdf file", type="pdf")
+    
     flag=None
     
     results = []
@@ -73,7 +74,7 @@ def main():
 
     st.subheader("Search Feature")
 
-    with st.form(key="data", clear_on_submit=False):
+    with st.form(key="data", clear_on_submit=True):
         dff = pd.DataFrame()
         first, second, third,fourth = st.columns([2,2,1,1])
         location_search = first.text_input('Location:').lower()
@@ -131,16 +132,13 @@ def main():
                             if skill in df_entities.iloc[i].Skills:
                                 score += points_per_skill
 
-
-
                     except:
                         pass
                     try:
                         
                         if int(min_year_of_exp_search) < df_entities.iloc[i].Year_of_exp < int(max_year_of_exp_search)+1:
                             score += 3
-                                
-                                #results .append(df_entities.iloc[i])
+                                          
                     except:
                         pass
                     scores.append(score)
@@ -148,7 +146,7 @@ def main():
 
                 df_entities['Scores'] = pd.Series(scores)
 
-                results = df_entities.sort_values(by=['Scores','Year_of_exp'], ascending=False).loc[:50]
+                results = df_entities.sort_values(by=['Scores','Year_of_exp'], ascending=False)[:50]
 
                 col=['Email','Mobile','Year_of_exp','Location','Skills','Scores']
             
