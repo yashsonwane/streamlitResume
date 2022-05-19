@@ -86,7 +86,7 @@ pathlib==1.0.1
 pdf2image==1.16.0
 pdfminer.six==20220319
 pickleshare==0.7.5
-Pillow @ file:///D:/bld/pillow_1648857310353/work
+Pillow 
 plac==1.1.3
 poppler-utils==0.1.0
 preshed==3.0.6
@@ -104,10 +104,10 @@ pydeck==0.7.1
 PyDrive==1.3.1
 Pygments==2.12.0
 Pympler==1.0.1
-pyparsing @ file:///home/conda/feedstock_root/build_artifacts/pyparsing_1649603503565/work
+pyparsing 
 pyresparser==1.0.6
 pyrsistent==0.18.1
-pytesseract @ file:///home/conda/feedstock_root/build_artifacts/pytesseract_1647306555263/work
+pytesseract 
 python-dateutil==2.8.2
 python-dotenv==0.19.2
 pytz==2022.1
