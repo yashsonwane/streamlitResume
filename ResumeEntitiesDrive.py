@@ -17,7 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'vision_api\vision_api_key.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'vision_api_key.json'
 client = vision_v1.ImageAnnotatorClient()
 
 def get_resume_entities(drive_df):
