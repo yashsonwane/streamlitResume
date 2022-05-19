@@ -8,3 +8,4 @@ pdf2image==1.16.0
 resparser==0.6
 pickleshare==0.7.5
 google-api-python-client
+google-auth-oauthlib
