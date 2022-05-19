@@ -60,8 +60,11 @@ def main():
                 drive_list_df=get_drive_folder_list(folder)
             except:
                 pass
-            print(drive_list_df)
-            flag=get_resume_entities(drive_list_df)
+            try:
+                print(drive_list_df)
+                flag=get_resume_entities(drive_list_df)
+            except:
+                pass
             print("drive dateset")
                 
     #Selecting dataset

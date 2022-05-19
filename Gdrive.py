@@ -3,14 +3,17 @@ import os,io
 from googleapiclient.http import MediaIoBaseDownload
 from Google import Create_Service
 
-CLIENT_SECRET_FILE = r'client_secrets.json'
-API_NAME = 'drive'
-API_VERSION = 'v3'
-SCOPES = ['https://www.googleapis.com/auth/drive']
+
+try:
+    CLIENT_SECRET_FILE = r'client_secrets.json'
+    API_NAME = 'drive'
+    API_VERSION = 'v3'
+    SCOPES = ['https://www.googleapis.com/auth/drive']
 
 
-service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
-
+    service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+except:
+    pass
 
 
 def get_shareable_link(file_id):
