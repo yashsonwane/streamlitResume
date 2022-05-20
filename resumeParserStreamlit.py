@@ -68,7 +68,7 @@ def main():
             print("drive dateset")
                 
     #Selecting dataset
-    st.subheader("Which Dataset you want to select")
+    st.subheader("Which Dataset you want to use")
     genre = st.radio(
         "",
         ('Discite Analytics dataset', 'Google Drive dataset'))
@@ -150,7 +150,7 @@ def main():
 
                 results = df_entities.sort_values(by=['Scores','Year_of_exp'], ascending=False)[:50]
 
-                col=['Email','Mobile','Year_of_exp','Location','Skills','Scores']
+                col=['Email','Mobile','Year_of_exp','Location','Skills','shareable_link','Scores']
             
                 results=results[col]   
                 # if results_skill and results_location:
