@@ -66,7 +66,7 @@ def main():
             except:
                 pass
             print("drive dateset")
-            
+
                 
     #Selecting dataset
     st.subheader("Which Dataset you want to use")
@@ -187,14 +187,10 @@ def main():
                                         reload_data=True
                                     )
 
-            
-                
-                selected = grid_response['selected_rows'] 
+                selected = grid_response['selected_rows']
                 
             except:
                 pass
-
-
 
 
 if __name__ == "__main__":

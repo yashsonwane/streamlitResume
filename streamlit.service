@@ -1,0 +1,11 @@
+[Unit]
+Description=streamlit app
+
+
+[Service]
+WorkingDirectory=<path to your app> /home/ubuntu/resume_parser/streamlitresume
+ExecStart=/home/ubuntu/resume_parser/resume/bin/python /home/ubuntu/resume_parser/resume/bin/streamlit run resumeParserStreamlit.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

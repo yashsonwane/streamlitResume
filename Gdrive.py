@@ -4,8 +4,9 @@ import os,io
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from Google import Create_Service
+from oauth2client.service_account import ServiceAccountCredentials
 
-
+########### Oauth2.0 account
 # try:
 #     CLIENT_SECRET_FILE = r'client_secrets.json'
 #     API_NAME = 'drive'
@@ -18,7 +19,18 @@ from Google import Create_Service
 #     pass
 
 
-CLIENT_SECRET_FILE = r'client_secrets.json'
+########### service account  ####################
+try:
+    scope = ['https://www.googleapis.com/auth/drive']
+    credentials = ServiceAccountCredentials.from_json_keyfile_name('service.json', scope)
+    # https://developers.google.com/drive/api/v3/quickstart/python
+    service = build('drive', 'v3', credentials=credentials)
+except Exception as e:
+    print(e)
+    pass
+
+
+'''# CLIENT_SECRET_FILE = r'client_secrets.json'
 API_SERVICE_NAME = 'drive'
 API_VERSION = 'v3'
 
@@ -29,7 +41,7 @@ with open(pickle_file, 'rb') as token:
 print(f"creaddd  {cred}")
 service = build(API_SERVICE_NAME, API_VERSION, credentials=cred)
 print(service)
-print(API_SERVICE_NAME, 'service created successfully')
+print(API_SERVICE_NAME, 'service created successfully')'''
 
 
 
