@@ -1,3 +1,4 @@
+python
 streamlit
 pandas
 streamlit-aggrid
@@ -9,3 +10,4 @@ resparser==0.6
 pickleshare==0.7.5
 google-api-python-client
 google-auth-oauthlib
+oauth2client
